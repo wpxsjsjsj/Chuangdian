@@ -1,0 +1,33 @@
+
+.h-layout[data-v-012ff438] {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 1rem;
+}
+.img-read[data-v-012ff438]{
+		width: 2.125rem;
+		height: 2.125rem;
+		margin-right: 0.875rem;
+}
+.img-noread[data-v-012ff438]{
+		width: 2.4375rem;
+		height: 2.4375rem;
+		margin-right: 0.5625rem;
+}
+
+
+.center {
+		flex: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+}
+.diXian {
+		background-color: #F2F4F6;
+		width: 100%;
+		height: 3.125rem;
+		line-height: 3.125rem;
+		text-align: center;
+}

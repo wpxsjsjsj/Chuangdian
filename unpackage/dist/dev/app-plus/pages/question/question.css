@@ -1,0 +1,15 @@
+
+.h-layout[data-v-70610024] {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		padding: 1rem;
+}
+
+
+.bg {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: #F3F4F6;
+}

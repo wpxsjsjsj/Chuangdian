@@ -1,0 +1,112 @@
+<template>
+	<view :style="{height:screenHeight+'px'}" class="page">
+		<barcode id='1' class="barcode" :style="{height:screenHeight+'px'}" autostart="true" ref="barcode"
+			background="rgb(0,0,0)" frameColor="#38CBD5" scanbarColor="#38CBD5" :filters="fil" :vibrate:="true"
+			@marked="success" @error="fail"></barcode>
+
+		<view
+			style="width: 750rpx; position: absolute; bottom: 0rpx; display: flex;flex-direction: column;justify-content: center;align-items: center; ">
+			<view style="width: 560rpx;height: 84rpx; background-color: #38CBD5;border-radius: 40rpx;border: 2rpx solid rgba(60,148,255,0.16);
+				color: #FFFFFF;font-size: 28rpx;display: flex;justify-content: center;align-items: center;" @click="search()">搜索设备
+			</view>
+			<view
+				style="width: 560rpx;height: 84rpx; background: #FFFFFF;border-radius: 40rpx;border: 4rpx solid #38CBD5;
+				margin-top: 32rpx;margin-bottom: 100rpx;color: #333333;font-size: 28rpx;display: flex;justify-content: center;align-items: center;"
+				@click="input()">手动填写</view>
+		</view>
+
+
+	</view>
+</template>
+
+<script>
+	export default {
+		onLoad() {
+
+			uni.getSystemInfo({
+				success: (res => {
+					this.screenWidth = res.windowWidth;
+					this.screenHeight = res.windowHeight;
+				})
+			});
+
+		},
+		data() {
+			return {
+				screenWidth: 0,
+				screenHeight: 0,
+
+				fil: [0, 2, 1]
+			}
+		},
+
+		methods: {
+			success(e) {
+				console.log("success1:" + e.detail.message);
+				// uni.navigateBack()
+				uni.redirectTo({
+					url: "/pages/bindDevice/bindDevice?sn=" + e.detail.message
+				})
+				/* 
+				 {
+				     "type":"marked",
+				     "timeStamp":1686457560990,
+				     "target":{
+				         "id":"1",
+				         "dataset":{
+				 
+				         },
+				         "offsetLeft":0,
+				         "offsetTop":0
+				     },
+				     "currentTarget":{
+				         "id":"1",
+				         "dataset":{
+				 
+				         },
+				         "offsetLeft":0,
+				         "offsetTop":0
+				     },
+				     "detail":{
+				         "type":"success",
+				         "message":"123124324134",
+				         "code":0,
+				         "charSet":""
+				     }
+				 }
+				 */
+			},
+			fail(e) {
+
+				console.log("fail1:" + JSON.stringify(e));
+			},
+
+			//搜索设备
+			search() {
+				uni.navigateTo({
+					url: "/pages/searchDevice/searchDevice"
+				})
+			},
+			//手动填写
+			input() {
+				uni.navigateTo({
+					url: "/pages/inputDevice/inputDevice"
+				})
+			},
+		}
+	}
+</script>
+
+<style>
+	.page {
+		width: 750rpx;
+		position: relative;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.barcode {
+		width: 750rpx;
+		background-color: #808080;
+	}
+</style>

@@ -1,0 +1,378 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				// "navigationBarTitleText": "uni-app"
+				"navigationStyle": "custom" //取消默认导航栏
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				// "navigationBarTitleText": "登录",
+				"navigationStyle": "custom", //取消默认导航栏
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/forgetPassword/forgetPassword",
+			"style": {
+				// "navigationBarTitleText": "忘记密码",
+				"navigationStyle": "custom", //取消默认导航栏
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/main/main",
+			"style": {
+				// "navigationBarTitleText": "首页",
+				"navigationStyle": "custom", //取消默认导航栏
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/scene/scene",
+			"style": {
+				"navigationBarTitleText": "场景",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}, {
+			"path": "pages/shop/shop",
+			"style": {
+				"navigationBarTitleText": "商城",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}, {
+			"path": "pages/mine/mine",
+			"style": {
+				// "navigationBarTitleText": "我的",
+				"navigationStyle": "custom", //取消默认导航栏
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/information/information",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/notice/notice",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/noticeDetail/noticeDetail",
+			"style": {
+				"navigationBarTitleText": "消息详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/scanQrCode/scanQrCode",
+			"style": {
+				"navigationBarTitleText": "扫码绑定",
+				"enablePullDownRefresh": false
+			}
+
+		}, 
+		{
+			"path": "pages/scanQrCodeForGateway/scanQrCodeForGateway",
+			"style": {
+				"navigationBarTitleText": "扫码绑定",
+				"enablePullDownRefresh": false
+			}
+		
+		},{
+			"path": "pages/inputDevice/inputDevice",
+			"style": {
+				"navigationBarTitleText": "手动填写",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/help/help",
+			"style": {
+				"navigationBarTitleText": "帮助反馈",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/question/question",
+			"style": {
+				"navigationBarTitleText": "常见问题",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/messagePushSetup/messagePushSetup",
+			"style": {
+				"navigationBarTitleText": "消息推送设置",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/onlineFeedback/onlineFeedback",
+			"style": {
+				"navigationBarTitleText": "在线反馈",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/aboutUs/aboutUs",
+			"style": {
+				"navigationBarTitleText": "关于我们",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/deviceList/deviceList",
+			"style": {
+				"navigationBarTitleText": "设备列表",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}, {
+			"path": "pages/propertyList/propertyList",
+			"style": {
+				"navigationBarTitleText": "物业列表",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}, {
+			"path": "pages/deviceOperate/deviceOperate",
+			"style": {
+				"navigationBarTitleText": "设备操作",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+
+		}
+		, {
+			"path": "pages/deviceDetail/deviceDetail",
+			"style": {
+				"navigationBarTitleText": "设备详情",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}, {
+			"path": "pages/shareDevice/shareDevice",
+			"style": {
+				"navigationBarTitleText": "共享设备",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+
+			}
+
+		}, {
+			"path": "pages/addressManage/addressManage",
+			"style": {
+				"navigationBarTitleText": "地址管理",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}, {
+			"path": "pages/addAddress/addAddress",
+			"style": {
+				"navigationBarTitleText": "新增地址",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}, {
+			"path": "pages/couponList/couponList",
+			"style": {
+				"navigationBarTitleText": "优惠券列表",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}, {
+			"path": "pages/shareDeviceList/shareDeviceList",
+			"style": {
+				"navigationBarTitleText": "分配设备",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}, {
+			"path": "pages/goodsList/goodsList",
+			"style": {
+				"navigationBarTitleText": "商品列表",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}, {
+			"path": "pages/goodsDetail/goodsDetail",
+			"style": {
+				"navigationBarTitleText": "商品详情",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+			}
+
+		}
+	    ,{
+            "path" : "pages/goodsConfirm/goodsConfirm",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品确认",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+            }
+            
+        }
+        ,{
+            "path" : "pages/searchDevice/searchDevice",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "搜索设备",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+            }
+            
+        }
+        ,{
+            "path" : "pages/orderList/orderList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单列表",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+            }
+            
+        }
+        ,{
+            "path" : "pages/orderDetail/orderDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+            }
+            
+        }
+        ,{
+            "path" : "pages/selectAddress/selectAddress",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "选择城市",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/bindDevice/bindDevice",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "绑定设备",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+            }
+            
+        }
+        ,{
+            "path" : "pages/consumableAnalysis/consumableAnalysis",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "耗材分析",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+            }
+            
+        }
+        ,{
+            "path" : "pages/analysisDetail/analysisDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "分析详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+            }
+            
+        }
+        ,{
+            "path" : "pages/gateway/gateway",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "网关列表",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+            }
+            
+        },
+		{
+		    "path" : "pages/deviceListForGateway/deviceListForGateway",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "设备列表",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+		    }
+		    
+		},
+		,{
+		    "path" : "pages/addGateway/addGateway",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "添加网关",
+		        "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F3F4F6"
+		    }
+		    
+		}
+    ],
+	//全局配置
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "创点",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF",
+		"enablePullDownRefresh": true,
+		"onReachBottomDistance": 50, //页面触底距离,默认50px
+		"backgroundTextStyle": "light" //下拉刷新样式
+		// "transparentTitle":"always"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#333333",
+		"borderStyle": "white", //上边框颜色
+		"backgroundColor": "white",
+		"list": [{
+				"pagePath": "pages/main/main",
+				"iconPath": "static/tabs/tab1_uncheck.png",
+				"selectedIconPath": "static/tabs/tab1_check.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/scene/scene",
+				"iconPath": "static/tabs/tab2_uncheck.png",
+				"selectedIconPath": "static/tabs/tab2_check.png",
+				"text": "场景"
+			},
+			{
+				"pagePath": "pages/shop/shop",
+				"iconPath": "static/tabs/tab3_uncheck.png",
+				"selectedIconPath": "static/tabs/tab3_check.png",
+				"text": "商城"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/tabs/tab4_uncheck.png",
+				"selectedIconPath": "static/tabs/tab4_check.png",
+				"text": "我的"
+			}
+		]
+	}
+}

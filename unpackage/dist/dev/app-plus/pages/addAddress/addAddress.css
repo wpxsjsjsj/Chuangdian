@@ -1,0 +1,82 @@
+
+.h-layout[data-v-b60cd6f8] {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+}
+.width100[data-v-b60cd6f8]{width: 100%;}
+.type2[data-v-b60cd6f8]{
+		font-size: 0.875rem;font-weight: 400;color: #666666;width: 5.625rem;
+}
+.type3[data-v-b60cd6f8]{
+		font-size: 0.875rem;font-weight: 400;color: #666666;width: 15.625rem;
+}
+.inputType2[data-v-b60cd6f8]{
+		font-size: 0.875rem;font-weight: 400;color: #333333;margin-left: 1.25rem;
+}
+.inputType3[data-v-b60cd6f8]{
+		font-size: 0.8125rem;font-weight: 400;color: #333333;margin-left: 1.25rem;
+}
+.picker[data-v-b60cd6f8]{border-bottom: none;margin-left: -0.9375rem;}
+.picker.picker1[data-v-b60cd6f8]{margin-left: 0;}
+
+
+.picker {
+	  padding: 15px;
+	  background-color: #FFF;
+	  border-bottom: 1px solid #ddd;
+}
+.bg {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: #F3F4F6;
+}
+.h-layout {
+		display: flex;
+		align-items: center;
+		padding: 1rem;
+		position: relative;
+}
+.line {
+		background: #979797;
+		opacity: 0.1;
+		height: 0.0625rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
+}
+.btn {
+		height: 3.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #38CBD5;
+		border-radius: 1.6875rem;
+		font-size: 1rem;
+		font-weight: 500;
+		color: #FFFFFF;
+		margin: 1rem 1rem 1.75rem 1rem;
+}
+.checkbox-label {
+	  position: relative;
+	  display: block;
+	  width: 1rem; /* 复选框大小 */
+	  height: 1rem; /* 复选框大小 */
+}
+.checkbox-input {
+	  opacity: 1; /* 隐藏原生复选框 */
+	  position: absolute;
+	  cursor: pointer;
+	  left: 50px;
+	  z-index: 1;
+	  width: 1rem; /* 图标大小 */
+	  height: 1rem;
+}
+.checkbox-image {
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  right: 0.75rem;
+	  width: 1rem; /* 图标大小 */
+	  height: 1rem; /* 图标大小 */
+}

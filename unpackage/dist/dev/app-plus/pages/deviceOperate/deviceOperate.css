@@ -1,0 +1,48 @@
+
+.huihui_component[data-v-4ed8768c] {
+    justify-content: center;
+    align-items: center;
+}
+.huihui_parent[data-v-4ed8768c] {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.huihui_process[data-v-4ed8768c] {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.huihui_inner_circle[data-v-4ed8768c] {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute; 
+	display: flex;
+}
+.huihui_left_part[data-v-4ed8768c] {
+    overflow: hidden;
+    position: absolute;
+}
+.huihui_right_part[data-v-4ed8768c] {
+    overflow: hidden;
+    position: absolute;
+}
+
+
+.opacity{opacity: 0;}
+.bg {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: #F3F4F6;
+}
+.h-layout {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+}
+.line {
+		height: 0.0625rem;
+		background-color: #EFF4FA;
+}

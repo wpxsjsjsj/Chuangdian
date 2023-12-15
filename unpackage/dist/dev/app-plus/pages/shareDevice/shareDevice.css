@@ -1,0 +1,16 @@
+
+.h-layout {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background: #FFFFFF;
+		border-radius: 0.5rem;
+		margin: 0 1rem 0.625rem 1rem;
+		padding: 0.9375rem;
+}
+.bg {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: #F3F4F6;
+}

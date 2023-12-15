@@ -1,0 +1,22 @@
+
+.isGet[data-v-15abbfb8]{filter: grayscale(1);}
+.coupon-scroll-view[data-v-15abbfb8] {
+			height: 100vh; /* 设置高度，可根据需要调整 */
+}
+.h-layout[data-v-15abbfb8] {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background: #FFFFFF;
+		border-radius: 0.5rem;
+		margin: 0 1rem 0.625rem 1rem;
+		padding: 0.9375rem;
+}
+
+
+.bg {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: #F3F4F6;
+}

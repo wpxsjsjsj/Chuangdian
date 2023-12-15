@@ -1,0 +1,16 @@
+
+.h-layout[data-v-311166b0] {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+}
+.cancel[data-v-311166b0]{color: #ff0000 !important;}
+.isGet[data-v-311166b0]{color: #333 !important;}
+
+
+.bg {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: #F3F4F6;
+}
