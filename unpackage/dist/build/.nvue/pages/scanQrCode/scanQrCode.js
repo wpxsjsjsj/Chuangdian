@@ -1,19 +1,6 @@
+import { _ as _export_sfc, f as formatAppLog } from "../../plugin-vue_export-helper.js";
 import { openBlock, createElementBlock, createElementVNode, normalizeStyle } from "vue";
-function formatAppLog(type, filename, ...args) {
-  if (uni.__log__) {
-    uni.__log__(type, filename, ...args);
-  } else {
-    console[type].apply(console, [...args, filename]);
-  }
-}
 var _style_0 = { "page": { "": { "width": "750rpx", "position": "relative", "flexDirection": "column", "justifyContent": "center" } }, "barcode": { "": { "width": "750rpx", "backgroundColor": "#808080" } } };
-var _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
-  }
-  return target;
-};
 const _sfc_main = {
   onLoad() {
     uni.getSystemInfo({

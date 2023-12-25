@@ -17,38 +17,56 @@
 			<!-- 项目 -->
 			<view class="h-layout">
 				<text style="font-size: 28rpx;font-weight: 400;color: #333333;">项目</text>
-				<text
-					style="flex: 1; font-size: 28rpx;font-weight: 400;color: #999999;text-align: end; padding-right: 16rpx;">请选择项目名称</text>
-				<image style="width: 12rpx;height: 16rpx;" :src="'/static/ic_next.png'"></image>
+				<view style="flex: 1;text-align: right;">
+					<picker mode="selector" data-index="0" :value="productId" :range="productList" range-key="name" @change="productChange">
+						<text
+							style="flex: 1; font-size: 28rpx;font-weight: 400;color: #999999;text-align: end; padding-right: 16rpx;">{{productId ?productId : "请选择项目名称"  }}</text>
+						<image style="width: 12rpx;height: 16rpx;" :src="'/static/ic_next.png'"></image>
+					</picker>
+					
+				</view>
 			</view>
 			<view style="height: 2rpx;background-color: #EFF4FA;margin: 0 32rpx;" />
 			<!-- 园区 -->
 			<view class="h-layout">
 				<text style="font-size: 28rpx;font-weight: 400;color: #333333;">园区</text>
-				<text
-					style="flex: 1; font-size: 28rpx;font-weight: 400;color: #999999;text-align: end; padding-right: 16rpx;">请选择园区</text>
-				<image style="width: 12rpx;height: 16rpx;" :src="'/static/ic_next.png'"></image>
+				<view style="flex: 1;text-align: right;">
+					<picker mode="selector" data-index="1" :value="gardenId"  :range="gardenList" range-key="name" @change="productChange">
+						<text
+							style="flex: 1; font-size: 28rpx;font-weight: 400;color: #999999;text-align: end; padding-right: 16rpx;">{{gardenId ||  "请选择园区"  }}</text>
+						<image style="width: 12rpx;height: 16rpx;" :src="'/static/ic_next.png'"></image>
+					</picker>
+				</view>
 			</view>
 			<view style="height: 2rpx;background-color: #EFF4FA;margin: 0 32rpx;" />
 			<!-- 楼栋 -->
 			<view class="h-layout">
 				<text style="font-size: 28rpx;font-weight: 400;color: #333333;">楼栋</text>
-				<text
-					style="flex: 1; font-size: 28rpx;font-weight: 400;color: #999999;text-align: end; padding-right: 16rpx;">请选择楼栋</text>
-				<image style="width: 12rpx;height: 16rpx;" :src="'/static/ic_next.png'"></image>
+				<view style="flex: 1;text-align: right;">
+				<picker mode="selector" data-index="2" :value="buildingId"  :range="buildingList" range-key="name" @change="productChange">
+					<text
+						style="flex: 1; font-size: 28rpx;font-weight: 400;color: #999999;text-align: end; padding-right: 16rpx;">{{buildingId ||  "请选择楼栋"  }}</text>
+					<image style="width: 12rpx;height: 16rpx;" :src="'/static/ic_next.png'"></image>
+				</picker>
+		       </view>
 			</view>
 			<view style="height: 2rpx;background-color: #EFF4FA;margin: 0 32rpx;" />
 			<!-- 楼层 -->
 			<view class="h-layout">
 				<text style="font-size: 28rpx;font-weight: 400;color: #333333;">楼层</text>
-				<text
-					style="flex: 1; font-size: 28rpx;font-weight: 400;color: #999999;text-align: end; padding-right: 16rpx;">请选择楼层</text>
-				<image style="width: 12rpx;height: 16rpx;" :src="'/static/ic_next.png'"></image>
+				<view style="flex: 1;text-align: right;">
+				<picker mode="selector" data-index="3" :value="floorId"  :range="floorList" range-key="name" @change="productChange">
+					<text
+						style="flex: 1; font-size: 28rpx;font-weight: 400;color: #999999;text-align: end; padding-right: 16rpx;">{{floorId ||  "请选择楼层"  }}</text>
+					<image style="width: 12rpx;height: 16rpx;" :src="'/static/ic_next.png'"></image>
+				</picker>
+				</view>
 			</view>
 			<view style="height: 2rpx;background-color: #EFF4FA;margin: 0 32rpx;" />
 			<!-- 厕所 -->
 			<view class="h-layout">
 				<text style="font-size: 28rpx;font-weight: 400;color: #333333;">厕所</text>
+				
 				<text
 					style="flex: 1; font-size: 28rpx;font-weight: 400;color: #999999;text-align: end; padding-right: 16rpx;">请选择厕所</text>
 				<image style="width: 12rpx;height: 16rpx;" :src="'/static/ic_next.png'"></image>
@@ -92,6 +110,17 @@
 			return {
 				list: [],
 				region: '',
+				productList:[],
+				productId:"",
+				gardenList:[],
+				gardenId:"",
+				buildingList:[],
+				buildingId:"",
+				floorList:[],
+				floorId:"",
+				messList:["productId", "gardenId", "buildingId", "floorId"],
+				arrayList:["productList", "gardenList", "buildingList", "floorList"],
+				messId: [],
 				range: [{
 						value: 0,
 						text: "权限一"
@@ -119,25 +148,36 @@
 		onLoad(options) {
 			console.log(options);
 			this.getShareDeviceList()
-			this.getSubEventList(options)
+			this.getSubEventList(0)
 		},
 		methods: {
 			chooseAddress(data){
 				// 更新地址数据
 				this.region = data
 			},
+			productChange(mess){
+				let v = mess.detail.value;
+				let index = mess.currentTarget.dataset.index - 0
+				console.log(v, index, this.arrayList[index], this[this.arrayList[index]])
+				this[this.messList[index]] = this[this.arrayList[index]][v- 0].name
+				this.messId[index] = this[this.arrayList[index]][v- 0].id
+				console.log(mess, this.messId, this.productId)
+				if(index < 3)this.getSubEventList(index + 1)
+			},
 			// 获取项目、园区、楼栋、楼层
-			async getSubEventList(options){
+			async getSubEventList(type){
+				console.log(type, this.messId, this.messId[type - 1])
 				let _this = this
 				const res = await this.$myRequest({
 					url: 'api/Share/getSubEventList',
 					method: "POST",
 					data: {
-						pid: options.id
+						pid: type < 1 ? 0 : this.messId[type - 1]
 					}
 				})
 				if(res.code == 1){
-					
+					console.log(type, this.arrayList, this.arrayList[type - 0])
+					this[this.arrayList[type - 0]] = res.data
 				}else{
 					uni.showToast({
 						title: res.msg,

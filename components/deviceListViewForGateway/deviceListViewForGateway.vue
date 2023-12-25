@@ -1,5 +1,5 @@
 <template>
-	<view style="display: flex;flex-direction: column;" v-for="item, i in list" @click="toDetail(item)">
+	<view style="display: flex;flex-direction: column;" v-for="item, i in list">
 		<view class="h-layout">
 			<!-- <image style="width: 232rpx;height: 232rpx;" :src="'/static/logo.png'"></image> -->
 			<!-- 左边布局 -->
@@ -16,19 +16,22 @@
 					<text>{{item.device_number}}</text>
 				</view>
 			</view>
-			<view class="currentElectricity">
+			<view class="currentElectricity" v-if="item.allocate_status != 0">
 				<view class="currentElectricity_m">{{item.remain}}%</view>
 				<view class="currentElectricity_n" :style="{
 					width: item.remain + '%',
 					backgroundColor: item.remain > 50 ? '#1db94abf' : 'red'
 				}"></view>
 			</view>
-			<view class="totalElectricity">
+			<view class="totalElectricity" v-if="item.allocate_status != 0">
 				<view class="currentElectricity_m">{{item.batlevel}}%</view>
 				<view class="currentElectricity_n" :style="{
 					width: item.batlevel + '%',
 					backgroundColor: item.batlevel > 50 ? '#1db94abf' : 'red'
 				}"></view>
+			</view>
+			<view class="initButton" @click="shebeiPush(item)" v-if="item.allocate_status == 0">
+			  注册	
 			</view>
 		</view>
 	</view>
@@ -50,6 +53,11 @@
 				uni.navigateTo({
 					// url: "/pages/deviceDetail/deviceDetail?id=" + id
 					url: `/pages/deviceOperate/deviceOperate?id=${item.id}&remain=${item.remain}&device_number=${item.device_number}&batlevel=${item.batlevel}&state_text=${item.state_text}`
+				})
+			},
+			shebeiPush(item){
+				uni.navigateTo({
+					url:"/pages/shareDeviceList/shareDeviceList?id=" + item.model_id
 				})
 			}
 		}
@@ -156,5 +164,15 @@
 		text-align: center;
 		line-height: 30px;
 		font-size: 12px;
+	}
+	.initButton{
+	 width: 60px;
+     background-color: #1db94abf;
+	 height: 30px;
+	 text-align: center;
+	 line-height: 30px;
+	 color: white;
+	 border-radius: 6px;
+	 font-size: 13px;	
 	}
 </style>

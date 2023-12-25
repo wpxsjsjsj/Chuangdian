@@ -31,8 +31,7 @@
       "concatenate": true
     },
     "splashscreen": {
-      "target": "id:1",
-      "autoclose": true,
+      "autoclose": false,
       "waiting": false,
       "delay": 0
     },
@@ -85,14 +84,14 @@
       "splashscreen": {
         "useOriginalMsgbox": true,
         "androidStyle": "default",
-        "iosStyle": "common",
+        "iosStyle": "storyboard",
         "android": {
           "hdpi": "static/bg_phone.png",
           "xhdpi": "static/bg_phone.png",
           "xxhdpi": "static/bg_phone.png"
         },
         "ios": {
-          "storyboard": ""
+          "storyboard": "F:/WeChat Files/wxid_h6z1aq3ccgtn22/FileStorage/File/2023-12/CustormStoryboard.zip"
         }
       },
       "google": {

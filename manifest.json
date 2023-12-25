@@ -11,7 +11,7 @@
         "nvueStyleCompiler" : "uni-app",
         "compilerVersion" : 3,
         "splashscreen" : {
-            "alwaysShowBeforeRender" : true,
+            "alwaysShowBeforeRender" : false,
             "waiting" : false,
             "autoclose" : true,
             "delay" : 0
@@ -50,7 +50,12 @@
             /* ios打包配置 */
             "ios" : {
                 "dSYMs" : false,
-                "idfa" : false
+                "idfa" : false,
+                "capabilities" : {
+                    "entitlements" : {
+                        "com.apple.developer.associated-domains" : [ "https://cdcs.qifudaren.net" ]
+                    }
+                }
             },
             /* SDK配置 */
             "sdkConfigs" : {
@@ -61,7 +66,16 @@
                     }
                 },
                 "ad" : {},
-                "payment" : {}
+                "payment" : {
+                    "alipay" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "weixin" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appid" : "wxc5b90afca0e5742f",
+                        "UniversalLinks" : ""
+                    }
+                }
             },
             "icons" : {
                 "android" : {
@@ -98,14 +112,14 @@
             "splashscreen" : {
                 "useOriginalMsgbox" : true,
                 "androidStyle" : "default",
-                "iosStyle" : "common",
+                "iosStyle" : "storyboard",
                 "android" : {
                     "hdpi" : "static/bg_phone.png",
                     "xhdpi" : "static/bg_phone.png",
                     "xxhdpi" : "static/bg_phone.png"
                 },
                 "ios" : {
-                    "storyboard" : ""
+                    "storyboard" : "F:/WeChat Files/wxid_h6z1aq3ccgtn22/FileStorage/File/2023-12/CustormStoryboard.zip"
                 }
             }
         }

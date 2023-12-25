@@ -205,7 +205,7 @@
 			// console.log(options.id);
 			// this.getDetail(options.id)
 			if (options.id) {
-				// this.id = options.id; 
+				this.id = options.id; 
 				this.getEventList()
 			}
 			if (options.keyword) {
@@ -235,7 +235,7 @@
 				searchKeyword: '',
 				snKeyword: '',
 				address: "省市",
-				id:"08D1F9C78D08",
+				id:"",
 				//是否显示新增设备
 				isShowAddDevice: true,
 				// 选中标签栏的序列,默认显示第一个
